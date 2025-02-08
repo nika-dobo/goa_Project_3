@@ -17,6 +17,8 @@ ID = int(input("Enter your ID: "))
 main_address = input("Enter your address(country/city/street): ")
 formal_address = input("Enter your formal address(country/city/street): ")
 
+
+
 print(" ")
 
 if age < 18:
@@ -41,7 +43,7 @@ if age < 18:
     card_ID = int(input("Enter your card ID: "))
     password = (input("Enter your password: "))
     acc_name = input("Enter your account name: ")
-    balance = 0
+    balance = 1000
     my.load("loading...",2)
 
     print(" ")
@@ -81,6 +83,22 @@ if age < 18:
             }
             for num, name in bank_function.items():
                 print(f"{num} - {name}")
+
+            print("What will you choose?")
+            Choice = int(input("Answer: "))
+
+            if Choice == 1:
+                print("You chose", bank_function[1])
+                print("How much money do you want to deposit?")
+                money = int(input("Amount of money: "))
+                if money > 1500:
+                    print("The amount exceeded the limit.")
+                    print("limit 1500 gel")
+                else:
+                    balance += money    
+
+
+                
 
             break  
         else:
