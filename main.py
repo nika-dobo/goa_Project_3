@@ -57,55 +57,119 @@ if age < 18:
             my.load("Checking your account...",2)
             print("login successful")
             print(" ")
-            bank_function = {
-            1: "Deposit",
-            2: "Withdraw",
-            3: "Transfer",
-            4: "Balance",
-            5: "Mobile recharge",
-            6: "Bill payment",            
-            7: "change password",
-            8: "change email",
-            9: "change mobile number",
-            10: "change account name",
-            11: "Close account",
-            12: "Open new account",
-            13: "View transaction history",
-            14: "Apply for loan",
-            15: "Update address",
-            16: "Update personal information",
-            17: "Update account information",
-            18: "trading to GEL - USD",#usd buy = 2.90, sell = 3
-            19: "trading to USD - GEL",#usd buy = 2.90, sell = 3
-            20: "trading to GEL - EUR",#eur buy = 3.40, sell = 3.60
-            21: "trading to EUR - GEL",#eur buy = 3.40, sell = 3.60
-            22: "Exit"    
-            }
-            for num, name in bank_function.items():
-                print(f"{num} - {name}")
+
+            my.bank_function()
 
             print("What will you choose?")
             Choice = int(input("Answer: "))
 
             if Choice == 1:
-                print("You chose", bank_function[1])
-                print("How much money do you want to deposit?")
-                money = int(input("Amount of money: "))
-                if money > 1500:
-                    print("The amount exceeded the limit.")
-                    print("limit 1500 gel")
-                else:
-                    balance += money    
+                print("You chose", my.bank_function[1])                
+                while True:
+                    print("How much money do you want to deposit?")
+                    money = int(input("Amount of money: "))
+                    my.load("Wait..", 3)
+                    if money > 1500:
+                        print("The amount exceeded the limit.")
+                        print("limit 1500 gel")                       
+                    else:
+                        balance += money
+                        print("Your balance has been replenished", money, "gel", sep=" - ")
+                        print("your balance", balance, sep=" - ") 
+                        print("Would you like to receive a receipt?")
+                        Answer = input("what your answer: ")
+                        my.load("wait..", 2)
+                        if Answer == "yes":
+                            my.Receipt("You replenish the balance", money)  
+                        break                        
+
+            elif Choice == 2:
+                print("You chose", my.bank_function[2])
+                while True:
+                    print("How much money do you want to Withdraw?")
+                    money = int(input("Amount of money: "))
+                    my.load("Wait..", 3)
+                    if money > balance:
+                        print("You do not have sufficient funds in your balance.")
+                        print("please try again")
+                    elif money > 500:
+                        print("you cent Withdraw")
+                        print("limit 500 gel")
+                    else:
+                        balance -= money  
+                        print("Your balance has been deducted", money, "gel", sep=" - ")
+                        print("your balance", balance, sep=" - ")
+                        print("Would you like to receive a receipt?")
+                        Answer = input("what your answer: ")
+                        my.load("wait..", 2)
+                        if Answer == "yes":
+                            my.Receipt("You're out of balance", money) 
+                        break
+
+            elif Choice == 3:
+                print("You chose", my.bank_function[3])
+                while True:
+                    print("How much money do you want to transfer")
+                    money = int(input("Amount of money: "))
+                    my.load("Wait..", 3)
+                    if money > balance:
+                        print("You do not have sufficient funds in your balance.")
+                        print("please try again")
+                    elif money > 500:
+                        print("you cent Withdraw")
+                        print("limit 500 gel")
+                    else:
+                        balance -= money  
+                        print("Your balance has been deducted", money, "gel", sep=" - ")
+                        print("your balance", balance, sep=" - ")
+                        print("Would you like to receive a receipt?")
+                        Answer = input("what your answer: ")
+                        my.load("wait..", 2)
+                        if Answer == "yes":
+                            my.Receipt("You transferred", money) 
+                        break 
+                    
+            elif Choice == 4:
+                print("You chose", my.bank_function[4])
+                print("your balance", balance, sep=" - ")
+
+            elif Choice == 5:
+                print("You chose", my.bank_function[5])
+                while True:
+                    print("To whom phone number do you want to transfer money")
+                    number = int(input("enter phone number: "))
+                    money = int(input("Amount of money: "))
+                    my.load("serch number", 3)
+                    if number != 9:
+                        print("Error. phone number not founded")
+                        print("please try again")
+                    elif money > balance:
+                        print("You do not have sufficient funds in your balance.")
+                        print("please try again")
+                    elif money > 50:
+                        print("you cent Deposit")
+                        print("limit 50 gel")
+                    else:
+                        balance -= money  
+                        print("Your balance has been deducted", money, "gel", sep=" - ")
+                        print("your balance", balance, sep=" - ")
+                        print("Would you like to receive a receipt?")
+                        Answer = input("what your answer: ")
+                        my.load("wait..", 2)
+                        if Answer == "yes":
+                            my.Receipt("You transferred", money) 
+                        break         
+                            
 
 
-                
+            break 
 
-            break  
         else:
             my.load("Checking your account...",8)
             print("login failed")
+            print("something incorect")
             print("try again")
-            continue
+            break
        
 
 
