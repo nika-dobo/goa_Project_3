@@ -8,48 +8,48 @@ def load(text,sec):
     time.sleep(sec)
 
 
-def acc_info():
-    name1 = input("Enter your name: ")
-    surname1 = input("Enter your surname: ")
-    age1 = int(input("Enter your age: "))
-    ID1 = int(input("Enter your ID: "))
-    card_ID1 = int(input("Enter your card ID: "))
-    password1= (input("Enter your password: "))
-    acc_name1 = input("Enter your account name: ")
-    email1 = input("Enter your email: ")
-    mobile_number1 = int(input("Enter your mobile number: ")) 
-    main_address1 = input("Enter your address(country/city/street): ")
-    formal_address1 = input("Enter your formal address(country/city/street): ")
 
 
-def bank_function():
-    bank_function = {
+
+
+bank_func = {
             1: "Deposit",
             2: "Withdraw",
             3: "Transfer",
             4: "Balance",
             5: "Deposit money on mobile",
-            6: "Bill payment",            
-            7: "change password",
-            8: "change email",
-            9: "change mobile number",
-            10: "change account name",
-            11: "Close account",
-            12: "Open new account",
-            13: "View transaction history",
-            14: "Apply for loan",
-            15: "Update address",
-            16: "Update personal information",
-            17: "Update account information",
-            18: "trading to GEL - USD",#usd buy = 2.90, sell = 3
-            19: "trading to USD - GEL",#usd buy = 2.90, sell = 3
-            20: "trading to GEL - EUR",#eur buy = 3.40, sell = 3.60
-            21: "trading to EUR - GEL",#eur buy = 3.40, sell = 3.60
-            22: "Exit"    
+            6: "Bill payment",
+            7: "View transaction history",
+            8: "Apply for loan",
+            9: "Update address",
+            10: "Update personal information",
+            11: "Update account information",
+            12: "trading to GEL - USD",#usd buy = 2.90, sell = 3
+            13: "trading to USD - GEL",#usd buy = 2.90, sell = 3
+            14: "trading to GEL - EUR",#eur buy = 3.40, sell = 3.60
+            15: "trading to EUR - GEL",#eur buy = 3.40, sell = 3.60
+            16: "bitcoin",
+            17: "more option",
+            18: "credit/DEBT",
+            19: "Exit"    
             }
-    for num, name in bank_function.items():
+
+def print_dict():  
+    for num, name in bank_func.items():
         print(f"{num} - {name}")
 
+
+bill = {
+        1: "Electricity",
+        2: "Gas",
+        3: "Water",
+        4: "Sewage",
+        5: "Internet",
+        6: "Television"      
+    }
+def bill_print():
+    for num1, bill_name in bill.items():
+        print(f"{num1} - {bill_name}")
 
 
 def Receipt(info, money):
@@ -60,3 +60,28 @@ def Receipt(info, money):
     print(" ")
     print("-" + "your balance", money, "gel" + "-", sep=" - ")
 
+
+
+more = {
+    1:"Change email",
+    2:"Change password",
+    3:"Change accaunt name",
+    4:"See current email",
+    5:"See current password",
+    6:"End"
+}
+def more_print():
+    for num2, option in more.items():
+        print(f"{num2} - {option}")
+
+
+bit = {
+    1:"Buy",
+    2:"Sell",
+    3:"Exit"
+}
+def bit_print():
+    for num3, op in bit.items():
+        print(f"{num3} - {op}")
+
+       
