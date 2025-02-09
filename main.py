@@ -172,7 +172,7 @@ if age < 18:
             break
        
 
-print("hi")
+
 
 
 

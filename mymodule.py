@@ -52,7 +52,6 @@ def bank_function():
 
 
 
-
 def Receipt(info, money):
     print("--------you Receipt--------")
     print(dt.datetime.now())
