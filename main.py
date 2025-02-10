@@ -87,6 +87,8 @@ if age >= 18:
     password = input("Enter your password: ")
     acc_name = input("Enter your account name: ")
     balance = 10000
+    usd_balance = 0
+    eur_balance = 0
     btc_price = 96490  
     btc_balance = 0.0 
     loan = 0.0
@@ -469,7 +471,7 @@ if age >= 18:
                             my.load("wait..", 4)
                             break
 
-                elif choice == 8:
+                elif Choice == 8:
                     print("\nYou chose", bf[8])
                     print("enter 'exit' if you dont want this")
                     exit = input("enter answer: ")
@@ -526,7 +528,7 @@ if age >= 18:
                                 break
 
 
-                elif choice == 9:
+                elif Choice == 9:
                     print("\nYou chose", bf[9])
                     print("enter 'exit' if you dont want this")
                     exit = input("enter answer: ")
@@ -551,7 +553,7 @@ if age >= 18:
                                 break      
 
 
-                elif choice == 10:
+                elif Choice == 10:
                     print("\nYou chose", bf[10])
                     print("enter 'exit' if you dont want this")
                     exit = input("enter answer: ")
@@ -589,23 +591,104 @@ if age >= 18:
                                 break 
                                 
 
+                elif Choice == 11:
+                    print("\nYou chose", bf[11])
+                    while True:
+                        print("How much USD do you want to buy for GEL?")
+                        buy = int(input("answer: "))
+                        buy1 = buy * 2.71
+                        print("praice", buy1, sep=" - ")
+                        if buy > balance:
+                            print("you cent buy \n you dont have money")
+                            break
+                        else:
+                            print("Are you sure you want to buy?")
+                            answer = input("what you think: ")  
+                            if answer == "yes":
+                                balance -= buy1
+                                usd_balance += buy
+                                print("You bought", buy, sep=" - ")  
+                                break
+                            else:
+                                print("operation canceled")
+                                break    
 
 
+                elif Choice == 12:
+                    print("\nYou chose", bf[12])
+                    while True:
+                        print("How much GEL do you want to buy for USD?")
+                        buy = int(input("answer: "))
+                        buy1 = buy * 0,36
+                        print("praice", buy1, sep=" - ")
+                        if buy > usd_balance:
+                            print("you cent buy \n you dont have money")
+                            break
+                        else:
+                            print("Are you sure you want to buy?")
+                            answer = input("what you think: ")  
+                            if answer == "yes":
+                                usd_balance -= buy1
+                                balance += buy
+                                print("You bought", buy, sep=" - ")  
+                                break
+                            else:
+                                print("operation canceled")
+                                break                  
 
 
+                elif Choice == 13:
+                    print("\nYou chose", bf[13])
+                    while True:
+                        print("How much EUR do you want to buy for GEL?")
+                        buy = int(input("answer: "))
+                        buy1 = buy * 2,90
+                        print("praice", buy1, sep=" - ")
+                        if buy > balance:
+                            print("you cent buy \n you dont have money")
+                            break
+                        else:
+                            print("Are you sure you want to buy?")
+                            answer = input("what you think: ")  
+                            if answer == "yes":
+                                balance -= buy1
+                                eur_balance += buy
+                                print("You bought", buy, sep=" - ")  
+                                break
+                            else:
+                                print("operation canceled")
+                                break  
 
 
-
-
-
+                elif Choice == 14:
+                    print("\nYou chose", bf[14])
+                    while True:
+                        print("How much GEL do you want to buy for EUR?")
+                        buy = int(input("answer: "))
+                        buy1 = buy * 0,36
+                        print("praice", buy1, sep=" - ")
+                        if buy > eur_balance:
+                            print("you cent buy \n you dont have money")
+                            break
+                        else:
+                            print("Are you sure you want to buy?")
+                            answer = input("what you think: ")  
+                            if answer == "yes":
+                                eur_balance -= buy1
+                                balance += buy
+                                print("You bought", buy, sep=" - ")  
+                                break
+                            else:
+                                print("operation canceled")
+                                break  
 
 
                 elif Choice == 15:
+                    print("\nYou chose", bf[15])
                     while True:
                         print("\nBalance:", balance, "USD <======> Bitcoin:", btc_balance, "BTC")
                         bit_p()
                         choice = input("what your chose: ")
-
 
                         if choice == "1":  
                             print("\nYou chose", bit[1])
@@ -637,6 +720,7 @@ if age >= 18:
                     
      
                 elif Choice == 16:
+                    print("\nYou chose", bf[16])
                     while True:
                         mp()
                         cn = int(input("what do you want?: "))
