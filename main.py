@@ -31,17 +31,21 @@ while True:
             else:
                 print("gmail error")              
         elif answer == "email":
-            eamil = input("enter your email: ")
-            if eamil[-8] == "@":
-                mail = eamil
+            email = input("enter your email: ")
+            if email[-8] == "@":
+                mail = email
                 break
             else:
                 print("email error")
+        else:
+            print("something incorect")
+            break
+
     except IndexError:
         print("this is not mail!!")
 
 while True:    
-    mobile_number = int(input("Enter your mobile number: "))
+    mobile_number = input("Enter your mobile number: ")
     len_id = len(mobile_number)
     if len_id == 9:
         print("your mobile number not founded")
