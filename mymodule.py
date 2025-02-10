@@ -10,34 +10,15 @@ def load(text,sec):
 
 
 
-
-
-bank_func = {
-            1: "Deposit",
-            2: "Withdraw",
-            3: "Transfer",
-            4: "Balance",
-            5: "Deposit money on mobile",
-            6: "Bill payment",
-            7: "View transaction history",
-            8: "Apply for loan",
-            9: "Update address",
-            10: "Update personal information",
-            11: "Update account information",
-            12: "trading to GEL - USD",#usd buy = 2.90, sell = 3
-            13: "trading to USD - GEL",#usd buy = 2.90, sell = 3
-            14: "trading to GEL - EUR",#eur buy = 3.40, sell = 3.60
-            15: "trading to EUR - GEL",#eur buy = 3.40, sell = 3.60
-            16: "bitcoin",
-            17: "more option",
-            18: "credit/DEBT",
-            19: "Exit"    
-            }
-
-def print_dict():  
-    for num, name in bank_func.items():
-        print(f"{num} - {name}")
-
+personal_info = {
+    1: "name",
+    2: "surename",
+    3: "age",
+    4: "formal_address"
+}
+def info_print():
+    for num, info in personal_info.items():
+        print(f"{num} - {info}")
 
 bill = {
         1: "Electricity",
@@ -48,8 +29,36 @@ bill = {
         6: "Television"      
     }
 def bill_print():
-    for num1, bill_name in bill.items():
-        print(f"{num1} - {bill_name}")
+    for num, bill_name in bill.items():
+        print(f"{num} - {bill_name}")
+
+bank_func = {
+            1: "Deposit",
+            2: "Withdraw",
+            3: "Transfer",
+            4: "Balance",
+            5: "Deposit money on mobile",
+            6: "Bill payment",
+            7: "View transaction history",
+            8: "Apply for loan",
+            9: "Loan closing",
+            10: "Update personal information",
+            11: "trading to GEL - USD",#usd buy = 2.90, sell = 3
+            12: "trading to USD - GEL",#usd buy = 2.90, sell = 3
+            13: "trading to GEL - EUR",#eur buy = 3.40, sell = 3.60
+            14: "trading to EUR - GEL",#eur buy = 3.40, sell = 3.60
+            15: "bitcoin",
+            16: "more option",
+            17: "credit/DEBT",
+            18: "Exit"    
+            }
+
+def print_dict():  
+    for num, name in bank_func.items():
+        print(f"{num} - {name}")
+
+
+
 
 
 def Receipt(info, money):
@@ -71,8 +80,8 @@ more = {
     6:"End"
 }
 def more_print():
-    for num2, option in more.items():
-        print(f"{num2} - {option}")
+    for num, option in more.items():
+        print(f"{num} - {option}")
 
 
 bit = {
@@ -81,7 +90,7 @@ bit = {
     3:"Exit"
 }
 def bit_print():
-    for num3, op in bit.items():
-        print(f"{num3} - {op}")
+    for num, op in bit.items():
+        print(f"{num} - {op}")
 
        

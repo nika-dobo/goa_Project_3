@@ -1,7 +1,7 @@
 # bank program
 
 import mymodule as my
-from mymodule import bank_func as bf, print_dict as pd, bill, bill_print as bp, more, more_print as mp, bit, bit_print as bit_p
+from mymodule import bank_func as bf, print_dict as pd, bill, bill_print as bp, more, more_print as mp, bit, bit_print as bit_p, personal_info as info, info_print as ip
 import random
 import math
 import datetime as dt
@@ -11,12 +11,55 @@ import time
 transaction_history = []
 
 
-name = input("Enter your name: ")
-surname = input("Enter your surname: ")
+while True:
+    name = input("Enter your name: ")
+    surname = input("Enter your surname: ")
+    if name == surname:
+        print("name cent be surname too")
+    else:
+        break
 age = int(input("Enter your age: "))
-email = input("Enter your email: ")
-mobile_number = int(input("Enter your mobile number: "))    
-ID = int(input("Enter your ID: "))
+print("what do you have gmail/email")
+while True: 
+    try:
+        answer = input("answer: ")
+        if answer == "gmail":
+            gamil = input("enter your gmail: ")
+            if gamil[-10] == "@":
+                mail = gamil
+                break
+            else:
+                print("gmail error")              
+        elif answer == "email":
+            eamil = input("enter your email: ")
+            if eamil[-8] == "@":
+                mail = eamil
+                break
+            else:
+                print("email error")
+    except IndexError:
+        print("this is not mail!!")
+
+while True:    
+    mobile_number = int(input("Enter your mobile number: "))
+    len_id = len(mobile_number)
+    if len_id == 9:
+        print("your mobile number not founded")
+        break
+    else:
+        print("your mobile number founded")
+        break
+
+while True:    
+    ID = int(input("Enter your ID: "))
+    len_id = len(ID)
+    if len_id == 11:
+        print("your ID not founded")
+        break
+    else:
+        print("your ID founded")
+        break
+
 main_address = input("Enter your address(country/city/street): ")
 formal_address = input("Enter your formal address(country/city/street): ")
 while True:
@@ -46,6 +89,7 @@ if age >= 18:
     balance = 10000
     btc_price = 96490  
     btc_balance = 0.0 
+    loan = 0.0
     my.load("loading...",2)
 
 
@@ -55,7 +99,7 @@ if age >= 18:
     email1 = input("Enter your email: ")
     mobile_number1 = int(input("Enter your mobile number: "))
     password1= (input("Enter your password: "))
-    if password1 == password and acc_name1 == acc_name and email1 == email and mobile_number1 == mobile_number:
+    if password1 == password and acc_name1 == acc_name and email1 == mail and mobile_number1 == mobile_number:
         my.load("Checking your account...",2)
         print("login successful")
         print(" ")
@@ -437,14 +481,113 @@ if age >= 18:
                             if job == "yes":
                                 print("you cen take loan")
                                 print("how mach money you take from job")
-                                money = float(input(Answer: ))                                
-                                if money < 2000:
+                                money = int(input("Answer:" ))                                
+                                if money <= 2000 and money >= 500:
                                     print("you cen take 5000 gel")
                                     Answer = input("you want take loan.")
-                                    print("loan \% is 25\%")
+                                    print("loan Percentage is 25%")
                                     if Answer == "yes":
                                         print("Your balance has been replenished")
                                         balance += 5000
+                                        loan += 5000
+                                        break
+                                    else:
+                                        print("operation canceld") 
+                                        break   
+                                elif money > 2000 and money <= 5000:
+                                    print("you cen take 10000 gel")
+                                    Answer = input("you want take loan.")
+                                    print("loan Percentage is 25%")
+                                    if Answer == "yes":
+                                        print("Your balance has been replenished")
+                                        balance += 10000
+                                        loan += 10000
+                                        break
+                                    else:
+                                        print("operation canceld") 
+                                        break 
+                                elif money > 5000 and money <= 7500:
+                                    print("you cen take 10000 gel")
+                                    Answer = input("you want take loan.")
+                                    print("loan Percentage is 25%")
+                                    if Answer == "yes":
+                                        print("Your balance has been replenished")
+                                        balance += 15000
+                                        loan += 15000
+                                        break
+                                    else:
+                                        print("operation canceld") 
+                                        break
+                                else:
+                                    print("we dont give 15000gel more \n sorry") 
+                                    break        
+                            else:
+                                print("operation canceld")
+                                break
+
+
+                elif choice == 9:
+                    print("\nYou chose", bf[9])
+                    print("enter 'exit' if you dont want this")
+                    exit = input("enter answer: ")
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print("your loan", loan, sep=" - ")
+                            Answer == input("do you want close loan? ")
+                            if Answer == "yes":
+                                if loan > balance:                                    
+                                    my.load("Are you sure?", 3)
+                                    print("sorry but you dont have money")
+                                    break
+                                else:
+                                    balance -= loan
+                                    loan == 0
+                                    print("your loan cloused")
+                                    break    
+                            else:
+                                print("operation canceld")  
+                                break      
+
+
+                elif choice == 10:
+                    print("\nYou chose", bf[10])
+                    print("enter 'exit' if you dont want this")
+                    exit = input("enter answer: ")
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            ip()
+                            Answer = int(input("what you chose: "))
+                            if Answer == 1:
+                                print("\nYou chose", info[1])
+                                name = input("chose your new name: ")
+                                print("name changed")
+                                break
+                            elif Answer == 2:
+                                print("\nYou chose", info[2])
+                                surename = input("chose your new surename: ")
+                                print("surename changed")
+                                break                            
+                            elif Answer == 3:
+                                while True:
+                                    print("\nYou chose", info[3])
+                                    age2 = input("chose your new age: ")
+                                    if age < 18:
+                                        print("you cent place 18")
+                                        break                                  
+                                    else:
+                                        age == age2
+                                        print("age changed")
+                                        break
+                            elif Answer == 4:
+                                print("\nYou chose", info[4])
+                                formal_address = input("chose your new formal address: ")
+                                print("formal address changed")
+                                break 
+                                
 
 
 
@@ -454,7 +597,10 @@ if age >= 18:
 
 
 
-                elif Choice == 16:
+
+
+
+                elif Choice == 15:
                     while True:
                         print("\nBalance:", balance, "USD <======> Bitcoin:", btc_balance, "BTC")
                         bit_p()
@@ -489,11 +635,8 @@ if age >= 18:
                         else:
                             print("\nInvalid choice!!")
                     
-
-
-
-                
-                elif Choice == 17:
+     
+                elif Choice == 16:
                     while True:
                         mp()
                         cn = int(input("what do you want?: "))
@@ -523,8 +666,7 @@ if age >= 18:
                             break
                         else:
                             print("\nError! Try again, my AMIGO!.")
-            
-                
+                      
 
     else:
         my.load("Checking your account...",8)
