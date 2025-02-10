@@ -20,13 +20,13 @@ while True:
         break
 age = int(input("Enter your age: "))
 print("what do you have gmail/email")
+answer = input("enter mail: ")
 while True: 
     try:
-        answer = input("answer: ")
         if answer == "gmail":
-            gamil = input("enter your gmail: ")
-            if gamil[-10] == "@":
-                mail = gamil
+            gmail = input("enter your gmail: ")
+            if gmail[-10] == "@":
+                mail = gmail
                 break
             else:
                 print("gmail error")              
