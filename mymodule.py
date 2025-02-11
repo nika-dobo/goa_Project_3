@@ -58,7 +58,20 @@ def print_dict():
         print(f"{num} - {name}")
 
 
-
+kid_func = {
+            1: "Deposit",
+            2: "Withdraw",
+            3: "Transfer",
+            4: "Balance",
+            5: "Deposit money on mobile",
+            7: "View transaction history",
+            8: "Update personal information",
+            9: "more option",
+            10: "Exit"
+}
+def print_dict2():  
+    for num, name in kid_func.items():
+        print(f"{num} - {name}")
 
 
 def Receipt(info, money):

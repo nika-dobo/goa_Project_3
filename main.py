@@ -1,7 +1,7 @@
 # bank program
 
 import mymodule as my
-from mymodule import bank_func as bf, print_dict as pd, bill, bill_print as bp, more, more_print as mp, bit, bit_print as bit_p, personal_info as info, info_print as ip
+from mymodule import bank_func as bf, print_dict as pd, bill, bill_print as bp, more, more_print as mp, bit, bit_print as bit_p, personal_info as info, info_print as ip, kid_func as kd, print_dict2 as pd2
 import random
 import math
 import datetime as dt
@@ -79,6 +79,9 @@ while True:
         print("gender not founded") 
         break   
     
+password = input("Enter your password: ")
+acc_name = input("Enter your account name: ")
+
 
 print(" ")
 
@@ -88,8 +91,6 @@ if age >= 18:
     print(" ")
 
 
-    password = input("Enter your password: ")
-    acc_name = input("Enter your account name: ")
     balance = 10000
     usd_balance = 0
     eur_balance = 0
@@ -814,7 +815,10 @@ if age >= 18:
                                 break
 
 
-
+                else:
+                    print("your chous not founded")
+                    break
+                    
 
     else:
         my.load("Checking your account...",8)
@@ -823,6 +827,7 @@ if age >= 18:
         print("try again")
 
 else:
+
     print("You are not allowed to open a bank account.")
     print("register kid account")
     my.load("loading...",2)
@@ -837,10 +842,275 @@ else:
     father_surname = input("Enter your father's surname: ")
     father_age = int(input("Enter your father's age: "))
 
-    print(" ")
 
 
 
+    kid_acc_name = input("Enter your account name: ")
+    kid_email = input("Enter your email: ")
+    kid_mobile_number = int(input("Enter your mobile number: "))
+    kid_password= (input("Enter your password: "))
+    if kid_password == password and kid_acc_name == acc_name and kid_email == mail and kid_mobile_number == mobile_number:
+        balance = 100
+        print(" ")
+        while True:
+            my.load("Checking your account...",2)
+            print("login successful")
+            print(" ")
+            while True:
+                print(" ")
+                kd()
+                print("\nWhat will you choose?")
+                Choice = int(input("Answer: "))
+                print(" ")
+                if Choice == 1:
+                    print("You chose", kd[1])   
+                    print("enter exit if you dont want this")
+                    exit = input("enter answer: ")
+                    while True: 
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":                 
+                            print("How much money do you want to deposit?")
+                            money = int(input("Amount of money: "))
+                            my.load("Wait..", 3)
+                            if money > 1500:
+                                print("\nThe amount exceeded the limit.")
+                                print("limit 1500 gel")                       
+                            else:
+                                balance += money
+                                history = money
+                                transaction_history.append(history)
+                                print("\nYour balance has been replenished", money, "gel", sep=" - ")
+                                print("your balance", balance, sep=" - ") 
+                                print("Would you like to receive a receipt?")
+                                Answer = input("what your answer: ")
+                                my.load("wait..", 2)
+                                if Answer == "yes":
+                                    my.Receipt("You replenish the balance", money) 
+                                    my.load("Wait..", 3) 
+                                break                        
 
 
+                elif Choice == 2:
+                    print("\nYou chose", kd[2])
+                    print("enter exit if you dont want this")
+                    exit = input("enter answer: ")
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print("\nHow much money do you want to Withdraw?")
+                            money = int(input("Amount of money: "))
+                            my.load("Wait..", 3)
+                            if money > balance:
+                                print("\nYou do not have sufficient funds in your balance.")
+                                print("please try again")
+                            elif money > 500:
+                                print("\nyou cent Withdraw")
+                                print("limit 500 gel")
+                            else:
+                                balance -= money 
+                                history = -money
+                                transaction_history.append(history)
+                                print("\nYour balance has been deducted", money, "gel", sep=" - ")
+                                print("your balance", balance, sep=" - ")
+                                print("Would you like to receive a receipt?")
+                                Answer = input("what your answer: ")
+                                my.load("wait..", 2)
+                                if Answer == "yes":
+                                    my.Receipt("You're out of balance", money)
+                                    my.load("wait..", 4) 
+                                break
 
+
+                elif Choice == 3:
+                    print("\nYou chose", kd[3])
+                    print("enter exit if you dont want this")
+                    exit = input("enter answer: ")
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print("\nHow much money do you want to transfer")
+                            money = int(input("Amount of money: "))
+                            my.load("Wait..", 3)
+                            if money > balance:
+                                print("\nYou do not have sufficient funds in your balance.")
+                                print("please try again")
+                            elif money > 500:
+                                print("\nyou cent Withdraw")
+                                print("limit 500 gel")
+                            else:
+                                balance -= money
+                                history = -money
+                                transaction_history.append(history)   
+                                print("\nYour balance has been deducted", money, "gel", sep=" - ")
+                                print("your balance", balance, sep=" - ")
+                                print("Would you like to receive a receipt?")
+                                Answer = input("what your answer: ")
+                                my.load("wait..", 2)
+                                if Answer == "yes":
+                                    my.Receipt("You transferred", money) 
+                                    my.load("wait..", 4)
+                                break
+                
+
+                elif Choice == 4:
+                    print("\nYou chose", kd[4])
+                    print("enter exit if you dont want this")
+                    exit = input("enter answer: ")
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":                        
+                            print("\nyour balance", balance, sep=" - ")
+                            my.load("wait..", 4)
+                            break
+
+
+                elif Choice == 5:
+                    print("\nYou chose", kd[5])
+                    print("enter exit if you dont want this")
+                    exit = input("enter answer: ")
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print("\nTo whom phone number do you want to transfer money")
+                            number = int(input("enter phone number: "))
+                            len_number = len(number)
+                            money = int(input("Amount of money: "))
+                            my.load("serch number", 3)
+                            if len_number != 9:
+                                print("\nError. phone number not founded")
+                                print("please try again")
+                                if money > balance:
+                                    print("\nYou do not have sufficient funds in your balance.")
+                                    print("please try again")
+                                elif money > 50:
+                                    print("\nyou cent Deposit")
+                                    print("limit 50 gel")
+                                else:
+                                    balance -= money 
+                                    history = -money
+                                    transaction_history.append(history)  
+                                    print("\nYour balance has been deducted", money, "gel", sep=" - ")
+                                    print("your balance", balance, sep=" - ")
+                                    print("Would you like to receive a receipt?")
+                                    Answer = input("what your answer: ")
+                                    my.load("wait..", 2)
+                                    if Answer == "yes":
+                                        my.Receipt("You transferred", money)
+                                        my.load("wait..", 4) 
+                                    break
+
+
+                elif Choice == 7:
+                    print("\nYou chose", kd[7])
+                    print("enter 'exit' if you dont want this")
+                    exit = input("enter answer: ")
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print(transaction_history)
+                            my.load("wait..", 4)
+                            break                    
+
+            
+                elif Choice == 8:
+                    print("\nYou chose", kd[8])
+                    print("enter 'exit' if you dont want this")
+                    exit = input("enter answer: ")
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            ip()
+                            Answer = int(input("what you chose: "))
+                            if Answer == 1:
+                                print("\nYou chose", info[1])
+                                name = input("chose your new name: ")
+                                print("name changed")
+                                break
+                            elif Answer == 2:
+                                print("\nYou chose", info[2])
+                                surename = input("chose your new surename: ")
+                                print("surename changed")
+                                break                            
+                            elif Answer == 3:
+                                while True:
+                                    print("\nYou chose", info[3])
+                                    age2 = input("chose your new age: ")
+                                    if age > 18:
+                                        print("you cent place 18")
+                                        print("if you want got 18+ accaunt go to bank")
+                                        break                                  
+                                    else:
+                                        age == age2
+                                        print("age changed")
+                                        break
+                            elif Answer == 4:
+                                print("\nYou chose", info[4])
+                                formal_address = input("chose your new formal address: ")
+                                print("formal address changed")
+                                break
+
+
+                elif Choice == 9:
+                    print("\nYou chose", kd[9])
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            mp()
+                            cn = int(input("what do you want?: "))
+                            if cn == 1:
+                                print("\nyou chose", more[1])
+                                old_password = input("Enter your current password to change email: ")
+                                if old_password == password:
+                                    email = input("Enter new email: ")
+                                    print("Email successfully changed!")
+                                else:
+                                    print("\nIncorrect password! Email not changed.")
+                            elif cn == 2:
+                                print("\nyou chose", more[2])
+                                password = input("Enter new password: ")
+                            elif cn == 3:
+                                print("\nyou chose", more[3])
+                                name == input("Enter new name: ")
+                            elif cn == 4:
+                                print("\nyou chose", more[4])
+                                print("Current email:", email)
+                            elif cn == 5:
+                                print("\nyou chose", more[5])
+                                print("Current password:", password)
+                            elif cn == 6:
+                                print("\nyou chose", more[5])
+                                print("End...")
+                                break
+                            else:
+                                print("\nError! Try again")
+
+
+                elif Choice == 10:
+                    print("\nYou chose", kd[10])
+                    while True:
+                        answer = input("Are you sure? ")    
+                        if answer == "no":
+                            print("good :)")
+                            break
+                        elif answer == "yes":
+                            answer = input("think agein: ") 
+                            if answer == "no":
+                                print("good :)")
+                                break
+                            elif answer == "yes": 
+                                print("no.\n buhahahaha")
+                                break
+                
+
+                else:
+                    print("your chous not founded")
+                    break
+                
