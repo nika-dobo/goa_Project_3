@@ -1,14 +1,2 @@
-
-from mymodule import bill, bill_print as bp
-
-
-
-
-
-
-
-
-
-
-
+import mymodule as my
 

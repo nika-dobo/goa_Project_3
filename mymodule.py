@@ -50,7 +50,8 @@ bank_func = {
             15: "bitcoin",
             16: "more option",
             17: "credit/DEBT",
-            18: "Exit"    
+            18: "ip adress",
+            19: "Exit"
             }
 
 def print_dict():  
@@ -106,4 +107,22 @@ def bit_print():
     for num, op in bit.items():
         print(f"{num} - {op}")
 
-       
+def ip():
+    num1 = random.randrange(1, 999)
+    num2 = random.randrange(1, 999)
+    num3 = random.randrange(1, 999)
+    num4 = random.randrange(1, 999)
+    print(num1,num2,num3,num4, sep=".")      
+
+def not_robot():
+    print("test: you are robot")
+    while True:
+        robot =  random.randrange(100000, 999999999) 
+        print(robot)
+        ask_robot = int(input("enter code: "))
+        if robot == ask_robot:
+            print("you are not robo_gabriel")
+            break
+        else:
+            print("you are robo_gabriel") 
+             

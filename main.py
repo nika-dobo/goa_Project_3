@@ -10,6 +10,7 @@ import time
 
 transaction_history = []
 
+my.not_robot()
 
 while True:
     name = input("Enter your name: ")
@@ -54,15 +55,7 @@ while True:
         print("your mobile number founded")
         break
 
-while True:    
-    ID = int(input("Enter your ID: "))
-    len_id = len(ID)
-    if len_id == 11:
-        print("your ID not founded")
-        break
-    else:
-        print("your ID founded")
-        break
+
 
 main_address = input("Enter your address(country/city/street): ")
 formal_address = input("Enter your formal address(country/city/street): ")
@@ -798,8 +791,15 @@ if age >= 18:
                                         print("you credit Closed")
                                         break
 
+
                 elif Choice == 18:
-                    print("\nYou chose", bf[17])
+                    print("\nYou chose", bf[19])
+                    my.ip()
+
+
+
+                elif Choice == 19:
+                    print("\nYou chose", bf[19])
                     while True:
                         answer = input("Are you sure? ")    
                         if answer == "no":
@@ -1113,4 +1113,3 @@ else:
                 else:
                     print("your chous not founded")
                     break
-                
