@@ -96,6 +96,7 @@ if age >= 18:
     btc_price = 96490  
     btc_balance = 0.0 
     loan = 0.0
+    credit = 0.0
     my.load("loading...",2)
 
 
@@ -598,163 +599,222 @@ if age >= 18:
                 elif Choice == 11:
                     print("\nYou chose", bf[11])
                     while True:
-                        print("How much USD do you want to buy for GEL?")
-                        buy = int(input("answer: "))
-                        buy1 = buy * 2.71
-                        print("praice", buy1, sep=" - ")
-                        if buy > balance:
-                            print("you cent buy \n you dont have money")
-                            break
-                        else:
-                            print("Are you sure you want to buy?")
-                            answer = input("what you think: ")  
-                            if answer == "yes":
-                                balance -= buy1
-                                usd_balance += buy
-                                print("You bought", buy, sep=" - ")  
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print("How much USD do you want to buy for GEL?")
+                            buy = int(input("answer: "))
+                            buy1 = buy * 2.71
+                            print("praice", buy1, sep=" - ")
+                            if buy > balance:
+                                print("you cent buy \n you dont have money")
                                 break
                             else:
-                                print("operation canceled")
-                                break    
+                                print("Are you sure you want to buy?")
+                                answer = input("what you think: ")  
+                                if answer == "yes":
+                                    balance -= buy1
+                                    usd_balance += buy
+                                    print("You bought", buy, sep=" - ")  
+                                    break
+                                else:
+                                    print("operation canceled")
+                                    break    
 
 
                 elif Choice == 12:
                     print("\nYou chose", bf[12])
                     while True:
-                        print("How much GEL do you want to buy for USD?")
-                        buy = int(input("answer: "))
-                        buy1 = buy * 0,36
-                        print("praice", buy1, sep=" - ")
-                        if buy > usd_balance:
-                            print("you cent buy \n you dont have money")
-                            break
-                        else:
-                            print("Are you sure you want to buy?")
-                            answer = input("what you think: ")  
-                            if answer == "yes":
-                                usd_balance -= buy1
-                                balance += buy
-                                print("You bought", buy, sep=" - ")  
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print("How much GEL do you want to buy for USD?")
+                            buy = int(input("answer: "))
+                            buy1 = buy * 0,36
+                            print("praice", buy1, sep=" - ")
+                            if buy > usd_balance:
+                                print("you cent buy \n you dont have money")
                                 break
                             else:
-                                print("operation canceled")
-                                break                  
+                                print("Are you sure you want to buy?")
+                                answer = input("what you think: ")  
+                                if answer == "yes":
+                                    usd_balance -= buy1
+                                    balance += buy
+                                    print("You bought", buy, sep=" - ")  
+                                    break
+                                else:
+                                    print("operation canceled")
+                                    break                  
 
 
                 elif Choice == 13:
                     print("\nYou chose", bf[13])
                     while True:
-                        print("How much EUR do you want to buy for GEL?")
-                        buy = int(input("answer: "))
-                        buy1 = buy * 2,90
-                        print("praice", buy1, sep=" - ")
-                        if buy > balance:
-                            print("you cent buy \n you dont have money")
-                            break
-                        else:
-                            print("Are you sure you want to buy?")
-                            answer = input("what you think: ")  
-                            if answer == "yes":
-                                balance -= buy1
-                                eur_balance += buy
-                                print("You bought", buy, sep=" - ")  
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print("How much EUR do you want to buy for GEL?")
+                            buy = int(input("answer: "))
+                            buy1 = buy * 2,90
+                            print("praice", buy1, sep=" - ")
+                            if buy > balance:
+                                print("you cent buy \n you dont have money")
                                 break
                             else:
-                                print("operation canceled")
-                                break  
+                                print("Are you sure you want to buy?")
+                                answer = input("what you think: ")  
+                                if answer == "yes":
+                                    balance -= buy1
+                                    eur_balance += buy
+                                    print("You bought", buy, sep=" - ")  
+                                    break
+                                else:
+                                    print("operation canceled")
+                                    break  
 
 
                 elif Choice == 14:
                     print("\nYou chose", bf[14])
                     while True:
-                        print("How much GEL do you want to buy for EUR?")
-                        buy = int(input("answer: "))
-                        buy1 = buy * 0,36
-                        print("praice", buy1, sep=" - ")
-                        if buy > eur_balance:
-                            print("you cent buy \n you dont have money")
-                            break
-                        else:
-                            print("Are you sure you want to buy?")
-                            answer = input("what you think: ")  
-                            if answer == "yes":
-                                eur_balance -= buy1
-                                balance += buy
-                                print("You bought", buy, sep=" - ")  
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print("How much GEL do you want to buy for EUR?")
+                            buy = int(input("answer: "))
+                            buy1 = buy * 0,36
+                            print("praice", buy1, sep=" - ")
+                            if buy > eur_balance:
+                                print("you cent buy \n you dont have money")
                                 break
                             else:
-                                print("operation canceled")
-                                break  
+                                print("Are you sure you want to buy?")
+                                answer = input("what you think: ")  
+                                if answer == "yes":
+                                    eur_balance -= buy1
+                                    balance += buy
+                                    print("You bought", buy, sep=" - ")  
+                                    break
+                                else:
+                                    print("operation canceled")
+                                    break  
 
 
                 elif Choice == 15:
                     print("\nYou chose", bf[15])
                     while True:
-                        print("\nBalance:", balance, "USD <======> Bitcoin:", btc_balance, "BTC")
-                        bit_p()
-                        choice = input("what your chose: ")
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            print("\nBalance:", balance, "USD <======> Bitcoin:", btc_balance, "BTC")
+                            bit_p()
+                            choice = input("what your chose: ")
 
-                        if choice == "1":  
-                            print("\nYou chose", bit[1])
-                            amount = float(input("Enter amount to buy BTC: "))
-                            if btc_price <= balance:
-                                btc_balance += amount / btc_price
-                                balance -= amount
-                                print("\nYou bought Bitcoin!")
+                            if choice == "1":  
+                                print("\nYou chose", bit[1])
+                                amount = float(input("Enter amount to buy BTC: "))
+                                if btc_price <= balance:
+                                    btc_balance += amount / btc_price
+                                    balance -= amount
+                                    print("\nYou bought Bitcoin!")
+                                else:
+                                    print("\nNot enough money!")
+
+                            elif choice == "2":  
+                                print("\nYou chose", bit[1])
+                                amount_btc = float(input("Enter BTC amount to sell: "))
+                                if amount_btc <= btc_balance:
+                                    balance += amount_btc * btc_price
+                                    btc_balance -= amount_btc
+                                    print("\nyou sold Bitcoin!")
+                                else:
+                                    print("\nnot enough Bitcoin!")
+
+                            elif choice == "3":
+                                print("\nYou chose", bit[1])  
+                                print("Goodbye!!")
+                                break
+
                             else:
-                                print("\nNot enough money!")
-
-                        elif choice == "2":  
-                            print("\nYou chose", bit[1])
-                            amount_btc = float(input("Enter BTC amount to sell: "))
-                            if amount_btc <= btc_balance:
-                                balance += amount_btc * btc_price
-                                btc_balance -= amount_btc
-                                print("\nyou sold Bitcoin!")
-                            else:
-                                print("\nnot enough Bitcoin!")
-
-                        elif choice == "3":
-                            print("\nYou chose", bit[1])  
-                            print("Goodbye!!")
-                            break
-
-                        else:
-                            print("\nInvalid choice!!")
+                                print("\nInvalid choice!!")
                     
      
                 elif Choice == 16:
                     print("\nYou chose", bf[16])
                     while True:
-                        mp()
-                        cn = int(input("what do you want?: "))
-                        if cn == 1:
-                            print("\nyou chose", more[1])
-                            old_password = input("Enter your current password to change email: ")
-                            if old_password == password:
-                                email = input("Enter new email: ")
-                                print("Email successfully changed!")
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            mp()
+                            cn = int(input("what do you want?: "))
+                            if cn == 1:
+                                print("\nyou chose", more[1])
+                                old_password = input("Enter your current password to change email: ")
+                                if old_password == password:
+                                    email = input("Enter new email: ")
+                                    print("Email successfully changed!")
+                                else:
+                                    print("\nIncorrect password! Email not changed.")
+                            elif cn == 2:
+                                print("\nyou chose", more[2])
+                                password = input("Enter new password: ")
+                            elif cn == 3:
+                                print("\nyou chose", more[3])
+                                name == input("Enter new name: ")
+                            elif cn == 4:
+                                print("\nyou chose", more[4])
+                                print("Current email:", email)
+                            elif cn == 5:
+                                print("\nyou chose", more[5])
+                                print("Current password:", password)
+                            elif cn == 6:
+                                print("\nyou chose", more[5])
+                                print("End...")
+                                break
                             else:
-                                print("\nIncorrect password! Email not changed.")
-                        elif cn == 2:
-                            print("\nyou chose", more[2])
-                            password = input("Enter new password: ")
-                        elif cn == 3:
-                            print("\nyou chose", more[3])
-                            name == input("Enter new name: ")
-                        elif cn == 4:
-                            print("\nyou chose", more[4])
-                            print("Current email:", email)
-                        elif cn == 5:
-                            print("\nyou chose", more[5])
-                            print("Current password:", password)
-                        elif cn == 6:
-                            print("\nyou chose", more[5])
-                            print("End...")
+                                print("\nError! Try again")
+
+                elif Choice == 17:
+                    print("\nYou chose", bf[17])
+                    while True:
+                        if exit == "exit":
+                            break  
+                        elif exit != "exit":
+                            answer = input("Close/open credit: ")
+                            if answer == "yes":
+                                num = input("how mach money do you want? ")
+                                credit += num
+                                break
+                            else:
+                                if credit == 0:
+                                    print("you dont have credit")
+                                    break    
+                                else:
+                                    if credit > balance:
+                                        print("you dont have money")
+                                        break
+                                    else:
+                                        print("you credit Closed")
+                                        break
+
+                elif Choice == 18:
+                    print("\nYou chose", bf[17])
+                    while True:
+                        answer = input("Are you sure? ")    
+                        if answer == "no":
+                            print("good :)")
                             break
-                        else:
-                            print("\nError! Try again, my AMIGO!.")
-                      
+                        elif answer == "yes":
+                            answer = input("think agein: ") 
+                            if answer == "no":
+                                print("good :)")
+                                break
+                            elif answer == "yes": 
+                                print("no.\n buhahahaha")
+                                break
+
+
+
 
     else:
         my.load("Checking your account...",8)
