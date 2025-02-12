@@ -938,6 +938,7 @@ if age >= 18:
             print("login failed")
             print("something incorect")
             print("try again")
+            break
 
 else:
 
