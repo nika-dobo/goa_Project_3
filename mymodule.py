@@ -48,7 +48,7 @@ bank_func = {
             16: "more option",
             17: "credit/DEBT",
             18: "ip adress",
-            19: "",
+            19: "create card",
             20: "Exit"
             }
 
@@ -110,7 +110,8 @@ def ip():
     num2 = random.randrange(1, 999)
     num3 = random.randrange(1, 999)
     num4 = random.randrange(1, 999)
-    print(num1,num2,num3,num4, sep=".")      
+    print(num1,num2,num3,num4, sep=".") 
+    print("country: gerogia \nregion name: fasanauri \ncity: fasanauri \nISC: Magticom")     
 
 def not_robot():
     print("test: you are robot")
