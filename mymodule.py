@@ -7,9 +7,6 @@ def load(text,sec):
     print(text)
     time.sleep(sec)
 
-
-
-
 personal_info = {
     1: "name",
     2: "surename",
@@ -51,7 +48,8 @@ bank_func = {
             16: "more option",
             17: "credit/DEBT",
             18: "ip adress",
-            19: "Exit"
+            19: "",
+            20: "Exit"
             }
 
 def print_dict():  

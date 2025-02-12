@@ -10,7 +10,7 @@ import time
 
 transaction_history = []
 
-my.not_robot()
+
 
 while True:
     name = input("Enter your name: ")
@@ -797,9 +797,20 @@ if age >= 18:
                     my.ip()
 
 
-
-                elif Choice == 19:
+                elif Choice == 20:
                     print("\nYou chose", bf[19])
+                    Feedback = int(input("Give us Feedback (1-10): "))
+                    if Feedback >= 7:
+                        print("Thank you, wish you best.")
+
+                    elif Feedback >= 5 and Feedback <= 6:
+                        Answer = input(("What issues you complain about, give us Feedback: "))
+
+                    elif Feedback >= 3 and Feedback <= 4:
+                        Answer2 = input(("Did our SupporTeam do something?, give us Feedback: "))
+
+                    else:
+                        print("You can come to office and we can complain about it.")
                     while True:
                         answer = input("Are you sure? ")    
                         if answer == "no":
