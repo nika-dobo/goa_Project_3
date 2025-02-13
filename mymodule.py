@@ -50,7 +50,8 @@ bank_func = {
             18: "ip adress",
             19: "create card",
             20: "Consultation",
-            21: "Exit"
+            21: "",
+            22: "Exit"
             }
 
 def print_dict():  
