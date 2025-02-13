@@ -522,7 +522,7 @@ def bank():
                                             else:
                                                 print("operation canceld") 
                                                 break 
-                                        elif money > 5000 and money <= 7500:
+                                        elif money > 5000:
                                             print("you cen take 10000 gel")
                                             Answer = input("you want take loan.")
                                             print("loan Percentage is 25% (18750)")
