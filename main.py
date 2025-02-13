@@ -1143,7 +1143,7 @@ if age >= 18:
                             elif ch == "3":
                                 print("Discord => JUJI, Phone => +995 591 78 ** ***")
                             elif ch == "4":
-                                print("Discord => Xechika, Phone => +995 555 33 ** ***")
+                                print("Discord => Xechika, Phone => +995 579 28 20 07")
                             elif ch == "5":
                                 print("Okey........")
                                 break
