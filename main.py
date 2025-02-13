@@ -11,6 +11,8 @@ import csv
 
 def bank():
 
+    print("hello best bani in world\nbank name: POF(Power Of Friendship)")
+
     my.not_robot()
 
     transaction_history = []
@@ -27,6 +29,15 @@ def bank():
         else:
             break
     age = int(input("Enter your age: "))
+
+    while True:
+        id = input("enter you id: ")
+        if len(id) == 11:
+            print("id confrimed")
+            break
+        else:
+            print("id dont founded")
+
     print("what do you have gmail/email")
     answer = input("enter mail: ")
     while True: 
