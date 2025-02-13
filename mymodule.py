@@ -50,7 +50,7 @@ bank_func = {
             18: "ip adress",
             19: "create card",
             20: "Consultation",
-            21: "",
+            21: "contacts",
             22: "Exit"
             }
 
