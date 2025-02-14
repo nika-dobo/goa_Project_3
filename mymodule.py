@@ -51,7 +51,8 @@ bank_func = {
             19: "create card",
             20: "Consultation",
             21: "contacts",
-            22: "Exit"
+            22: "shop",
+            23: "Exit"
             }
 
 def print_dict():  
@@ -127,3 +128,145 @@ def not_robot():
         else:
             print("you are robo_gabriel") 
              
+shop = {
+    1: "Electronics",
+    2: "Discount coupons",
+    3: "gift cards",
+    4: "Souvenirs",
+    5: "Training courses",
+    6: "exit"
+}      
+def print_shop():  
+    for num, name in shop.items():
+        print(f"{num} - {name}")       
+
+elec = {
+    1:"Watch",
+    2:"Fitness bracelets",
+    3:"Wireless headphones",
+    4:"Mechanical keyboards",
+    5:"mice",
+    6:"power banks",
+    7:"Wireless charging",
+    8:"Smart speakers"
+}  
+def print_elec():  
+    for num, name in elec.items():
+        print(f"{num} - {name}")      
+
+elec_item = {
+    1: "Apple Watch",
+    2: "Samsung Galaxy Watch",
+    3: "Xiaomi Mi Band"
+} 
+def print_item1():  
+    for num, name in elec_item.items():
+        print(f"{num} - {name}")   
+
+bracelets = {
+    1:'Xiaomi',
+    2:'Huawei',
+    3:'Fitbit'
+} 
+def print_item2():  
+    for num, name in bracelets.items():
+        print(f"{num} - {name}") 
+
+headphones = {
+    1:'AirPods',
+    2:'Samsung Buds, Sony WF-1000XM5'
+}   
+def print_item3():  
+    for num, name in headphones.items():
+        print(f"{num} - {name}")       
+
+keyboards = {
+    1:'Razer',
+    2:'Logitech',
+    3:'Corsair'
+}  
+def print_item4():  
+    for num, name in keyboards.items():
+        print(f"{num} - {name}")   
+
+mice = {
+    1:'Logitech G Pro',
+    2:'Razer DeathAdder',
+    3:'SteelSeries'
+}
+def print_item5():  
+    for num, name in mice.items():
+        print(f"{num} - {name}")
+
+charging = {
+    1:'MagSafe',
+    2:'Samsung Wireless Charger'
+}
+def print_item7():  
+    for num, name in charging.items():
+        print(f"{num} - {name}")
+
+power ={
+    1:'Anker',
+    2:'Xiaomi',
+    3:'Baseus'
+}  
+def print_item6():  
+    for num, name in power.items():
+        print(f"{num} - {name}")  
+
+speakers = {
+    1:'Google Nest',
+    2:'Amazon Echo',
+    3:'yandex'
+} 
+def print_item8():  
+    for num, name in speakers.items():
+        print(f"{num} - {name}")      
+
+coupons = {
+    1:"Streaming services",
+    2:"Online courses",
+    3:"Cloth",
+    4:"Restaurants",
+    5:"Cinemas",
+    6:"Bowling",
+    7:"billiards"
+}
+def coupon():  
+    for num, name in coupons.items():
+        print(f"{num} - {name}")
+
+
+gift = {
+    1:"Electronics",
+    2:"Cloth",
+    3:"Streaming services",
+    4:"Trips",
+    5:"Cinemas",
+    6:"Restaurants",
+    }
+def gifts():  
+    for num, name in gift.items():
+        print(f"{num} - {name}")
+
+
+Souvenirs = {
+    1:"pens",
+    2:"Diaries",
+    3:"Flash drives",
+}
+def Souvenir():  
+    for num, name in Souvenirs.items():
+        print(f"{num} - {name}")
+
+courses = {
+    1:"Graphic design",
+    2:"GOA",
+    3:"cooking",
+    4:"Unity",
+    5:"Basics of financial literacy"
+}
+def course():  
+    for num, name in courses.items():
+        print(f"{num} - {name}")
