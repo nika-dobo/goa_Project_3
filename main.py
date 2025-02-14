@@ -11,7 +11,9 @@ import csv
 
 def bank():
 
-    print("hello best bani in world\nbank name: POF(Power Of Friendship)")
+    print("hello best bank in world\nbank name: POF(Power Of Friendship)")
+
+    print( )
 
     my.not_robot()
 
