@@ -1739,9 +1739,30 @@ def bank():
                                     print("this function dont founded")
 
 
-
                         elif Choice == 23:
                             print("\nYou chose", bf[23])
+                            while True:
+                                print("\nauctions item:\n", my.auctions)
+                                my.print_auctions_func
+                                choice = input("enter your chose: ")                                                            
+                                if choice == "1":
+                                    print("you chose", my.auctions_func[1])
+                                    my.create_auction()
+                                elif choice == "2":
+                                    print("you chose", my.auctions_func[2])
+                                    my.place_bid()
+                                elif choice == "3":
+                                    print("you chose", my.auctions_func[3])
+                                    my.end_auction()
+                                elif choice == "4":
+                                    print("you chose", my.auctions_func[4])
+                                    break
+                                else:
+                                    print("error\n we dont founded this!")
+
+
+                        elif Choice == 24:
+                            print("\nYou chose", bf[24])
                             Feedback = int(input("Give us Feedback (1-10): "))
                             if Feedback >= 7:
                                 print("Thank you, wish you best.")

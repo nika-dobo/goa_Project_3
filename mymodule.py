@@ -52,7 +52,8 @@ bank_func = {
             20: "Consultation",
             21: "contacts",
             22: "shop",
-            23: "Exit"
+            23: "auctions",
+            24: "Exit"
             }
 
 def print_dict():  
@@ -270,3 +271,68 @@ courses = {
 def course():  
     for num, name in courses.items():
         print(f"{num} - {name}")
+
+
+auctions_func = {
+    1: "Create auction",
+    2: "Creative Authentic",
+    3: "End auction",
+    4: "Log out"
+}
+def print_auctions_func():  
+    for num, name in auctions_func.items():
+        print(f"{num} - {name}")
+
+auctions = {}
+
+def create_auction():
+    print("auctions item:\n", auctions)
+    item = input("enter item name: ")
+    min_price = float(input("enter price: "))
+    duration = int(input("Enter auction duration (in seconds): "))
+    end_time = dt.datetime.now() + dt.timedelta(seconds=duration)
+    
+    auctions[item] = {
+        "min_price": min_price,
+        "current_price": min_price,
+        "highest_bidder": None,
+        "end_time": end_time
+    }
+    print(f"auctions '{item}' start! Minimum bid: {min_price} GEL. Will end in {end_time}.")
+
+def place_bid():
+    item = input("Enter the name of the product you want to bid on: ")
+    if item not in auctions:
+        print("There is no such auction!")
+        return
+    
+    if dt.datetime.now() >= auctions[item]["end_time"]:
+        print("The auction has already ended!")
+        return
+    
+    bid = float(input("Enter your bid: "))
+    if bid > auctions[item]["current_price"]:
+        auctions[item]["current_price"] = bid
+        auctions[item]["highest_bidder"] = input("Enter your name: ")
+        print(f"Bid accepted! Current price {bid} GEL.")
+    else:
+        print("Your bid must be higher than the current price.!")
+
+def end_auction():
+    item = input("Enter the name of the completed auction: ")
+    if item not in auctions:
+        print("There is no such auction!")
+        return
+    
+    if dt.datetime.now() < auctions[item]["end_time"]:
+        print("The auction is not over yet!")
+        return
+    
+    winner = auctions[item]["highest_bidder"]
+    final_price = auctions[item]["current_price"]
+    if winner:
+        print(f"auctions '{item}' Completed! Winner: {winner} bet {final_price} GEL.")
+    else:
+        print(f"auctions '{item}' ended without a winner.")
+    
+    del auctions[item]
