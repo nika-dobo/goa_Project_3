@@ -1,13 +1,12 @@
 # bank program
-
+#სიბლოლოების რაოდებობა 83 589
 import mymodule as my
 from mymodule import bank_func as bf, print_dict as pd, bill, bill_print as bp, more, more_print as mp, bit, bit_print as bit_p, personal_info as info, info_print as ip, kid_func as kd, print_dict2 as pd2, print_shop as sh, print_elec as pe, print_item1 as pt1, print_item2 as pt2
 import random
-import math
 import datetime as dt
-import time
 import os
 import csv
+
 
 def bank():
 
@@ -127,6 +126,9 @@ def bank():
         email1 = input("Enter your email: ")
         mobile_number1 = input("Enter your mobile number: ")
         password1= input("Enter your password: ")
+
+        #shen xar tu ara
+
         while True:
             if password1 == password and acc_name1 == acc_name and email1 == mail and mobile_number1 == mobile_number:
                 my.load("Checking your account...",2)
@@ -1785,7 +1787,7 @@ def bank():
                                     print("good :)")
                                     break
                                 elif answer == "yes":
-                                    answer = input("think agein: ") 
+                                    answer = input("think again: ") 
                                     if answer == "no":
                                         print("good :)")
                                         break

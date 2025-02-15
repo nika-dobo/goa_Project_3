@@ -40,10 +40,10 @@ bank_func = {
             8: "Apply for loan",
             9: "Loan closing",
             10: "Update personal information",
-            11: "trading to GEL - USD",#usd buy = 2.90, sell = 3
-            12: "trading to USD - GEL",#usd buy = 2.90, sell = 3
-            13: "trading to GEL - EUR",#eur buy = 3.40, sell = 3.60
-            14: "trading to EUR - GEL",#eur buy = 3.40, sell = 3.60
+            11: "trading to GEL - USD",
+            12: "trading to USD - GEL",
+            13: "trading to GEL - EUR",
+            14: "trading to EUR - GEL",
             15: "bitcoin",
             16: "more option",
             17: "credit/DEBT",
