@@ -44,6 +44,8 @@ bank_func = {
             12: "trading to USD - GEL",
             13: "trading to GEL - EUR",
             14: "trading to EUR - GEL",
+            25: "trading to RUB - GEL",
+            26: "trading to GEL - RUB",
             15: "bitcoin",
             16: "more option",
             17: "credit/DEBT",

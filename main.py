@@ -110,10 +110,10 @@ def bank():
 
         print(" ")
 
-        balance = 10000
+        balance = 10000.0
         usd_balance = 0
         eur_balance = 0
-        btc_price = 96490  
+        btc_price = 275435.35  
         btc_balance = 0.0 
         loan = 0.0
         credit = 0.0
@@ -724,6 +724,58 @@ def bank():
                                             break  
 
 
+                        elif Choice == 25:
+                            print("\nYou chose", bf[25])
+                            while True:
+                                if exit == "exit":
+                                    break  
+                                elif exit != "exit":
+                                    print("How much GEL do you want to buy for RUB?")
+                                    buy = int(input("answer: "))
+                                    buy1 = buy * 32.24
+                                    print("praice", buy1, sep=" - ")
+                                    if buy > eur_balance:
+                                        print("you cent buy \n you dont have money")
+                                        break
+                                    else:
+                                        print("Are you sure you want to buy?")
+                                        answer = input("what you think: ")  
+                                        if answer == "yes":
+                                            eur_balance -= buy1
+                                            balance += buy
+                                            print("You bought", buy, sep=" - ")  
+                                            break
+                                        else:
+                                            print("operation canceled")
+                                            break 
+
+
+                        elif Choice == 26:
+                            print("\nYou chose", bf[26])
+                            while True:
+                                if exit == "exit":
+                                    break  
+                                elif exit != "exit":
+                                    print("How much RUB do you want to buy for GEL?")
+                                    buy = int(input("answer: "))
+                                    buy1 = buy * 0.031
+                                    print("praice", buy1, sep=" - ")
+                                    if buy > eur_balance:
+                                        print("you cent buy \n you dont have money")
+                                        break
+                                    else:
+                                        print("Are you sure you want to buy?")
+                                        answer = input("what you think: ")  
+                                        if answer == "yes":
+                                            eur_balance -= buy1
+                                            balance += buy
+                                            print("You bought", buy, sep=" - ")  
+                                            break
+                                        else:
+                                            print("operation canceled")
+                                            break 
+
+
                         elif Choice == 15:
                             print("\nYou chose", bf[15])
                             while True:
@@ -831,7 +883,7 @@ def bank():
                             print("\nYou chose", bf[19])
                             CARD_TYPES = ["Mastercard", "Visa", "American Express", "Discover", "UnionPay", "JCB", "Diners Club", "Maestro"]
                             CARD_CATEGORIES = ["Standard", "Premium", "Gold", "Platinum", "Business", "Corporate", "Student/School Card", "Travel Card", "Digital Card"]
-
+                            
                             CARD_BENEFITS = {
                                 "Standard": "Basic banking services with no extra benefits.",
                                 "Premium": "Includes cashback rewards and lower fees.",
@@ -862,7 +914,7 @@ def bank():
                                 print(f"\n📌 Choose {title}:")
                                 for i, option in enumerate(options, start=1):
                                     print(f"{i}. {option}")
-
+                            
                                 return options[get_numeric_input("👉 Enter the number: ", 1, len(options)) - 1]
 
                             def generate_card_number():
