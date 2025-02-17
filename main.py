@@ -539,7 +539,7 @@ def bank():
                                             else:
                                                 print("operation canceld") 
                                                 break 
-                                        elif money > 5000:
+                                        elif money > 5000 and money < 10000:
                                             print("you cen take 10000 gel")
                                             Answer = input("you want take loan.")
                                             print("loan Percentage is 25% (18750)")
@@ -548,6 +548,16 @@ def bank():
                                                 balance += 15000
                                                 loan += 18750
                                                 break
+                                        elif money > 10000:
+                                            print("you cen take 10000 gel")
+                                            Answer = input("you want take loan.")
+                                            print("loan Percentage is 25%")
+                                            loans = input("enter loan: ")
+                                            if Answer == "yes":
+                                                print("Your balance has been replenished")
+                                                balance += loans
+                                                loan += loans
+                                                break    
                                             else:
                                                 print("operation canceld") 
                                                 break
