@@ -16,6 +16,8 @@ def bank():
 
     my.not_robot()
 
+    my.pin()
+
     transaction_history = []
 
     print( )

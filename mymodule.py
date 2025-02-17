@@ -338,3 +338,16 @@ def end_auction():
         print(f"auctions '{item}' ended without a winner.")
     
     del auctions[item]
+
+
+def pin():
+    print("eter pin")
+    while True:
+        robot =  random.randrange(1000, 9999) 
+        print(robot)
+        ask_robot = int(input("enter code: "))
+        if robot == ask_robot:
+            print("corect pin")
+            break
+        else:
+            print("uncorect pin") 
