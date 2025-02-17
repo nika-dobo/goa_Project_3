@@ -984,8 +984,8 @@ def bank():
                                         1: "Accounts and cards",
                                         2: "Loans and Credits",
                                         3: "Internet and Mobile Banking",
-                                        4: "Other Questions"
-
+                                        4: "Other Questions",
+                                        5: "exit"                                
                                 }
 
                                 for num, name in Answer_to_consultation2.items():
@@ -1190,7 +1190,6 @@ def bank():
                                         elif questions3 == 3:
                                                 print("\nHow do I block or cancel my internet banking account?")
                                                 print("\nIn you'r account: Setting --> private access, then simply verification of you'r identity you will able to deactivate or delete account.")
-
 
                                         elif questions3 == 4:
                                                 print("\nIs it possible to make online transfers?")
