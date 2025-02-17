@@ -80,7 +80,6 @@ def print_dict2():
 
 
 def Receipt(info, money):
-    print("--------you Receipt--------")
     print(dt.datetime.now())
     print("---------------------------")
     print(info)

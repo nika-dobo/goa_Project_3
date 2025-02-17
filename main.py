@@ -1233,7 +1233,7 @@ def bank():
                                     print("Wrong action!!!!!!")   
 
 
-                        elif choice == 22:
+                        elif Choice == 22:
                             print("\nYou chose", bf[22])
                             sh()
                             while True:
@@ -1811,7 +1811,7 @@ def bank():
                             print("\nYou chose", bf[23])
                             while True:
                                 print("\nauctions item:\n", my.auctions)
-                                my.print_auctions_func
+                                my.print_auctions_func()
                                 choice = input("enter your chose: ")                                                            
                                 if choice == "1":
                                     print("you chose", my.auctions_func[1])
