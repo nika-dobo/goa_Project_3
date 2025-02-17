@@ -214,6 +214,7 @@ def bank():
                                     break  
                                 elif exit != "exit":
                                     print("\nHow much money do you want to transfer")
+                                    sender = input("Who are you sending the money to? ")
                                     money = int(input("Amount of money: "))
                                     my.load("Wait..", 3)
                                     if money > balance:
