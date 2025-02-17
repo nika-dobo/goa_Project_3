@@ -1,5 +1,6 @@
 # bank program
-#სიბლოლოების რაოდებობა 83 589
+# სიბლოლოების რაოდებობა 83 589
+# ფუნქციების რაოდენობა 52
 import mymodule as my
 from mymodule import bank_func as bf, print_dict as pd, bill, bill_print as bp, more, more_print as mp, bit, bit_print as bit_p, personal_info as info, info_print as ip, kid_func as kd, print_dict2 as pd2, print_shop as sh, print_elec as pe, print_item1 as pt1, print_item2 as pt2
 import random
@@ -95,7 +96,7 @@ def bank():
     while True:    
         password = input("Enter your password: ")
         
-        if len(mobile_number) >= 8 and mobile_number.isdigit(): 
+        if len(password) >= 8 and password.isdigit(): 
             print("Your password crieated")
             break
         else:
@@ -260,7 +261,7 @@ def bank():
                                     break  
                                 elif exit != "exit":
                                     print("\nTo whom phone number do you want to transfer money")
-                                    number = int(input("enter phone number: "))
+                                    number = input("enter phone number: ")
                                     len_number = len(number)
                                     money = int(input("Amount of money: "))
                                     my.load("serch number", 3)
