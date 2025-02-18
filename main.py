@@ -909,7 +909,7 @@ def bank():
                                 "Travel Card": "No foreign transaction fees, better exchange rates.",
                                 "Digital Card": "Virtual card for online transactions with extra security."
                             }
-
+                            
                             def get_user_input(prompt):
                                 while True:
                                     value = input(prompt).strip()
@@ -1154,7 +1154,6 @@ def bank():
                                                 print("\nYes, you can but you need atleast 50000$ of house and 1000$ car.")
 
 
-
                                 elif Answer_to_consultation == 3:
 
                                         # ინტერნეტ და მობაილ ბანკინგი
@@ -1202,7 +1201,62 @@ def bank():
                                         elif questions3 == 6:
                                                 print("\nHow can I link my card to Google Pay or Apple Pay?")
                                                 print("\nJust add the card on your Google Pay or Apple Pay. We will handle next.")
-                            
+                                
+                                elif Answer_to_consultation == 4:
+
+                                    # სხვა კითხვები
+                                    print("Other Questions")
+                                    questions4 = {
+                                    # 1როგორ დავუკავშირდე კლიენტთა მხარდაჭერის სამსახურს?
+                                    1: "How can I contact customer support?",
+                                    # 2რა სამუშაო საათები გაქვთ?
+                                    2: "What are your working hours?",
+                                    # 3გაქვთ თუ არა სპეციალური შეთავაზებები და აქციები?
+                                    3: "Do you have special offers and promotions?",
+                                    # 4როგორ შევამოწმო ჩემი საკრედიტო ქულა?
+                                    4: "How can I check my credit score?",
+                                    # 5როგორ შევიტანო ან გავიტანო ნაღდი ფული ბანკის განყოფილებაში?
+                                    5: "How can I deposit or withdraw cash at a bank branch?",
+                                    # 6შესაძლებელია თუ არა მესამე პირის სახელზე ანგარიშის გახსნა?
+                                    6: "Is it possible to open an account in the name of a third party?",
+                                    }
+
+                                    for num, name in questions4.items():
+                                            print(f"{num} - {name}")
+
+                                    questions4 = int(input("Enter which question u want to get answered: "))
+
+                                    if questions4 == 1: 
+                                            print("\nHow can I contact customer support?")
+                                            print("\nGo to settings and click Contact to support.")
+
+                                    elif questions4 == 2:
+                                            print("\nWhat are your working hours?")
+                                            print("\nWe working in buisness day 10AM - 9PM, in weekends 12AM-6PM.")
+
+                                    elif questions4 == 3:
+                                            print("\nDo you have special offers and promotions?")
+                                            print("\nYes we have if you get loan you will get another loan with no %.")
+
+                                    elif questions4 == 4:
+                                            print("\nHow can I check my credit score?")
+                                            print("\nGo to online bank, and it will see under the card.")
+
+                                    elif questions4 == 5:
+                                            print("\nHow can I deposit or withdraw cash at a bank branch?")
+                                            print("\nYou will need card and cards pin. \nSimply you can scan the card then input the PINcode and check click the how many cars you want to withdraw.\nIf you want to deposit you'r cash go to input technology and scan you'r card or enter you'r ID simple 1 Time code you will enter and input the cash that all.")
+
+                                    elif questions4 == 6:
+                                            print("\nIs it possible to open an account in the name of a third party?")
+                                            print("\nNo. It wont work like this")
+
+
+                                elif Answer_to_consultation == 5:
+                                    break
+
+                                else: 
+                                    print("error")
+                                    break
 
                         elif Choice == 21:
                             print("\n you chose", bf[21]) 
